@@ -15,7 +15,7 @@ class JinaEmbedding:
             self.model = SentenceTransformer(
                 model_name,
                 trust_remote_code=True,
-                device='cpu',
+                device='cuda',
                 model_kwargs={'default_task': 'retrieval'}
             )
             logger.info("✅ Jina embedding model loaded successfully")
